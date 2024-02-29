@@ -2,10 +2,10 @@ from flask import Flask, request,jsonify
 import pickle
 import numpy as np
 
-f = open('diabetmodel.pkl', 'rb')
 
 
-model = pickle.load(f)
+
+model = pickle.load(open('diabetmodel.pkl', 'rb'))
 
 
 f.close()
