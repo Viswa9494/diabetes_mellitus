@@ -2,14 +2,10 @@ from flask import Flask, request,jsonify
 import pickle
 import numpy as np
 
-
-
-
 model = pickle.load(open('diabetmodel.pkl', 'rb'))
 
-
-f.close()
 app = Flask(__name__)
+
 @app.route('/')
 def home():
     return "Hello World"
